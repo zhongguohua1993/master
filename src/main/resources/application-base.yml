@@ -1,6 +1,6 @@
 spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/lsdown3.0?characterEncoding=UTF-8
-    username: gx_wlw
-    password: gx_wlw_123
-    driver-class-name: com.mysql.jdbc.Driver
+  profiles:
+    active: dbConfig
+logging:
+  config: classpath:log/logback-spring.xml
+  path: ./logs/
