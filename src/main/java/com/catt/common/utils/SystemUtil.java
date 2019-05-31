@@ -38,8 +38,4 @@ public class SystemUtil {
     }
     return ipList;
   }
-
-  public static void main(String[] args) {
-    System.out.println(getLocalIPList());
-  }
 }

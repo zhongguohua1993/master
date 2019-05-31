@@ -9,7 +9,7 @@ import java.util.List;
 public interface IQueueDao {
   List<TaskInst> getTaskInstList(TaskProgramMapper taskProgramMapper);
 
-  List<ProgramSetting> getProgramSettingList(ProgramSetting.ProgramType programType);
+  List<ProgramSetting> getProgramSettingList();
 
   List<TaskProgramMapper> getTaskProgramMapperList(ProgramSetting programSetting);
 }
