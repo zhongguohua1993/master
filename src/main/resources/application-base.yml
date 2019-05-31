@@ -2,5 +2,5 @@ spring:
   profiles:
     active: dbConfig
 logging:
-  config: classpath:log/logback-spring.xml
+  config: classpath:./logback-spring.xml
   path: ./logs/
