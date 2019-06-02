@@ -1,6 +1,9 @@
 spring:
   profiles:
-    active: dbConfig
+    active: dbConfig,redis
 logging:
   config: classpath:./logback-spring.xml
   path: ./logs/
+mybatis-plus:
+  # 支持统配符 * 或者 ; 分割
+  typeEnumsPackage: com.catt.eomsteam.lsdown.base.enumerate

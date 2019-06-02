@@ -1,10 +1,8 @@
 package com.catt.eomsteam.lsdown.base.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.io.Serializable;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.experimental.Accessors;
+import com.catt.eomsteam.lsdown.base.entity.BaseIdEntity;
+import org.springframework.stereotype.Repository;
 
 /**
  * <p>
@@ -12,13 +10,11 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author zhongguohua@gdcattsoft.com
- * @since 2019-05-30
+ * @since 2019-06-02
  */
-@Data
-@EqualsAndHashCode(callSuper = false)
-@Accessors(chain = true)
 @TableName("t_mod_task_setting")
-public class TaskSetting implements Serializable {
+@Repository
+public class TaskSetting extends BaseIdEntity {
 
 private static final long serialVersionUID=1L;
 
@@ -83,4 +79,117 @@ private static final long serialVersionUID=1L;
     private String taskArgs;
 
 
+    public String getTaskName() {
+        return taskName;
+    }
+
+    public void setTaskName(String taskName) {
+        this.taskName = taskName;
+    }
+
+    public String getProvinceName() {
+        return provinceName;
+    }
+
+    public void setProvinceName(String provinceName) {
+        this.provinceName = provinceName;
+    }
+
+    public String getCityName() {
+        return cityName;
+    }
+
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
+    }
+
+    public String getInDir() {
+        return inDir;
+    }
+
+    public void setInDir(String inDir) {
+        this.inDir = inDir;
+    }
+
+    public String getOutDir() {
+        return outDir;
+    }
+
+    public void setOutDir(String outDir) {
+        this.outDir = outDir;
+    }
+
+    public Integer getOkFlag() {
+        return okFlag;
+    }
+
+    public void setOkFlag(Integer okFlag) {
+        this.okFlag = okFlag;
+    }
+
+    public String getSaveTable() {
+        return saveTable;
+    }
+
+    public void setSaveTable(String saveTable) {
+        this.saveTable = saveTable;
+    }
+
+    public Integer getKeepAliveCycle() {
+        return keepAliveCycle;
+    }
+
+    public void setKeepAliveCycle(Integer keepAliveCycle) {
+        this.keepAliveCycle = keepAliveCycle;
+    }
+
+    public String getPriority() {
+        return priority;
+    }
+
+    public void setPriority(String priority) {
+        this.priority = priority;
+    }
+
+    public String getVender() {
+        return vender;
+    }
+
+    public void setVender(String vender) {
+        this.vender = vender;
+    }
+
+    public String getGroupName() {
+        return groupName;
+    }
+
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
+    }
+
+    public String getTaskArgs() {
+        return taskArgs;
+    }
+
+    public void setTaskArgs(String taskArgs) {
+        this.taskArgs = taskArgs;
+    }
+
+    @Override
+    public String toString() {
+        return "TaskSetting{" +
+        "taskName=" + taskName +
+        ", provinceName=" + provinceName +
+        ", cityName=" + cityName +
+        ", inDir=" + inDir +
+        ", outDir=" + outDir +
+        ", okFlag=" + okFlag +
+        ", saveTable=" + saveTable +
+        ", keepAliveCycle=" + keepAliveCycle +
+        ", priority=" + priority +
+        ", vender=" + vender +
+        ", groupName=" + groupName +
+        ", taskArgs=" + taskArgs +
+        "}";
+    }
 }
