@@ -19,7 +19,7 @@ public class QueueServiceImpl implements IQueueService {
   @Autowired IQueueDao queueDao;
   @Resource RedisTemplate<String, List> redisTemplate;
 
-  /** 将任务添加到队列中-按任务类型分队列 ????*/
+  /** 将任务添加到队列中-按任务类型分队列*/
   @Override
   public void doQueue() {
     List<String> localIPList = SystemUtil.getLocalIPList();
