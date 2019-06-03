@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author zhongguohua@gdcattsoft.com
- * @since 2019-05-31
+ * @since 2019-06-02
  */
 public interface IProgramSettingService extends IService<ProgramSetting> {
 

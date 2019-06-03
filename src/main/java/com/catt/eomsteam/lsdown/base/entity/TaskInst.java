@@ -2,10 +2,8 @@ package com.catt.eomsteam.lsdown.base.entity;
 
 import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.io.Serializable;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.experimental.Accessors;
+import com.catt.eomsteam.lsdown.base.entity.BaseIdEntity;
+import org.springframework.stereotype.Repository;
 
 /**
  * <p>
@@ -13,13 +11,11 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author zhongguohua@gdcattsoft.com
- * @since 2019-05-30
+ * @since 2019-06-02
  */
-@Data
-@EqualsAndHashCode(callSuper = false)
-@Accessors(chain = true)
 @TableName("t_mod_task_inst")
-public class TaskInst implements Serializable {
+@Repository
+public class TaskInst extends BaseIdEntity {
 
 private static final long serialVersionUID=1L;
 
@@ -114,4 +110,171 @@ private static final long serialVersionUID=1L;
     private String remark;
 
 
+    public Long getTaskId() {
+        return taskId;
+    }
+
+    public void setTaskId(Long taskId) {
+        this.taskId = taskId;
+    }
+
+    public String getTaskName() {
+        return taskName;
+    }
+
+    public void setTaskName(String taskName) {
+        this.taskName = taskName;
+    }
+
+    public String getProvinceName() {
+        return provinceName;
+    }
+
+    public void setProvinceName(String provinceName) {
+        this.provinceName = provinceName;
+    }
+
+    public String getCityName() {
+        return cityName;
+    }
+
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
+    }
+
+    public String getInDir() {
+        return inDir;
+    }
+
+    public void setInDir(String inDir) {
+        this.inDir = inDir;
+    }
+
+    public String getOutDir() {
+        return outDir;
+    }
+
+    public void setOutDir(String outDir) {
+        this.outDir = outDir;
+    }
+
+    public Integer getOkFlag() {
+        return okFlag;
+    }
+
+    public void setOkFlag(Integer okFlag) {
+        this.okFlag = okFlag;
+    }
+
+    public String getSaveTable() {
+        return saveTable;
+    }
+
+    public void setSaveTable(String saveTable) {
+        this.saveTable = saveTable;
+    }
+
+    public String getPriority() {
+        return priority;
+    }
+
+    public void setPriority(String priority) {
+        this.priority = priority;
+    }
+
+    public String getVender() {
+        return vender;
+    }
+
+    public void setVender(String vender) {
+        this.vender = vender;
+    }
+
+    public String getGroupName() {
+        return groupName;
+    }
+
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
+    }
+
+    public Integer getDealMonth() {
+        return dealMonth;
+    }
+
+    public void setDealMonth(Integer dealMonth) {
+        this.dealMonth = dealMonth;
+    }
+
+    public Integer getDealDay() {
+        return dealDay;
+    }
+
+    public void setDealDay(Integer dealDay) {
+        this.dealDay = dealDay;
+    }
+
+    public Integer getDealHour() {
+        return dealHour;
+    }
+
+    public void setDealHour(Integer dealHour) {
+        this.dealHour = dealHour;
+    }
+
+    public String getTaskArgs() {
+        return taskArgs;
+    }
+
+    public void setTaskArgs(String taskArgs) {
+        this.taskArgs = taskArgs;
+    }
+
+    public BigDecimal getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(BigDecimal createTime) {
+        this.createTime = createTime;
+    }
+
+    public BigDecimal getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(BigDecimal updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    @Override
+    public String toString() {
+        return "TaskInst{" +
+        "taskId=" + taskId +
+        ", taskName=" + taskName +
+        ", provinceName=" + provinceName +
+        ", cityName=" + cityName +
+        ", inDir=" + inDir +
+        ", outDir=" + outDir +
+        ", okFlag=" + okFlag +
+        ", saveTable=" + saveTable +
+        ", priority=" + priority +
+        ", vender=" + vender +
+        ", groupName=" + groupName +
+        ", dealMonth=" + dealMonth +
+        ", dealDay=" + dealDay +
+        ", dealHour=" + dealHour +
+        ", taskArgs=" + taskArgs +
+        ", createTime=" + createTime +
+        ", updateTime=" + updateTime +
+        ", remark=" + remark +
+        "}";
+    }
 }

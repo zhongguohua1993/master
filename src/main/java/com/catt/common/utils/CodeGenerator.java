@@ -37,6 +37,7 @@ public class CodeGenerator {
 
     // 全局配置
     GlobalConfig gc = new GlobalConfig();
+    gc.setFileOverride(true);
     String projectPath = System.getProperty("user.dir");
     gc.setOutputDir(projectPath + "/src/main/java");
     gc.setAuthor("zhongguohua@gdcattsoft.com");
@@ -44,13 +45,13 @@ public class CodeGenerator {
     // gc.setSwagger2(true); 实体属性 Swagger2 注解
     mpg.setGlobalConfig(gc);
 
-    // 数据源配置
+    // 数据源配置t_mod_program_setting,t_mod_task_inst,t_mod_task_program_mapper,t_mod_task_setting
     DataSourceConfig dsc = new DataSourceConfig();
     dsc.setUrl("jdbc:mysql://localhost:3306/lsdown3.0?characterEncoding=UTF-8&serverTimezone=UTC");
     // dsc.setSchemaName("public");
     dsc.setDriverName("com.mysql.cj.jdbc.Driver");
-    dsc.setUsername("gx_wlw");
-    dsc.setPassword("gx_wlw_123");
+    dsc.setUsername("develop");
+    dsc.setPassword("develop2017");
     mpg.setDataSource(dsc);
 
     // 包配置
@@ -119,8 +120,8 @@ public class CodeGenerator {
     StrategyConfig strategy = new StrategyConfig();
     strategy.setNaming(NamingStrategy.underline_to_camel);
     strategy.setColumnNaming(NamingStrategy.underline_to_camel);
-    //    strategy.setSuperEntityClass("com.baomidou.ant.common.BaseEntity");
-    strategy.setEntityLombokModel(true);
+    strategy.setSuperEntityClass("com.catt.eomsteam.lsdown.base.entity.BaseIdEntity");
+    strategy.setEntityLombokModel(false);
     strategy.setRestControllerStyle(true);
     //    strategy.setSuperControllerClass("com.baomidou.ant.common.BaseController");
     strategy.setInclude(scanner("表名，多个英文逗号分割").split(","));

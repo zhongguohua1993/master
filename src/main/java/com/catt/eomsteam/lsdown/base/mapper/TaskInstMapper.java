@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author zhongguohua@gdcattsoft.com
- * @since 2019-05-30
+ * @since 2019-06-02
  */
 public interface TaskInstMapper extends BaseMapper<TaskInst> {
 

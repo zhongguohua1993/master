@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author zhongguohua@gdcattsoft.com
- * @since 2019-05-30
+ * @since 2019-06-02
  */
 @Service
 public class TaskSettingServiceImpl extends ServiceImpl<TaskSettingMapper, TaskSetting> implements ITaskSettingService {
