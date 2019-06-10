@@ -1,20 +1,16 @@
-package com.catt.eomsteam.lsdown.base.dao.impl;
+package com.catt.eomsteam.lsdown.master.dao.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.catt.common.utils.ObjectUtil;
-import com.catt.common.utils.SystemUtil;
 import com.catt.eomsteam.lsdown.base.entity.ProgramSetting;
 import com.catt.eomsteam.lsdown.base.entity.TaskInst;
 import com.catt.eomsteam.lsdown.base.entity.TaskProgramMapper;
 import com.catt.eomsteam.lsdown.base.mapper.ProgramSettingMapper;
 import com.catt.eomsteam.lsdown.base.mapper.TaskInstMapper;
 import com.catt.eomsteam.lsdown.base.mapper.TaskProgramMapperMapper;
-import com.catt.eomsteam.lsdown.base.dao.IQueueDao;
-import org.apache.commons.lang3.SystemUtils;
+import com.catt.eomsteam.lsdown.master.dao.IQueueDao;
 import org.springframework.stereotype.Repository;
 
-import java.io.File;
-import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
 

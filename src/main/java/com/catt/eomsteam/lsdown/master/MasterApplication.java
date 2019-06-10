@@ -1,11 +1,9 @@
 package com.catt.eomsteam.lsdown.master;
 
 import com.catt.common.utils.SpringUtil;
-import com.catt.eomsteam.lsdown.master.service.IQueueService;
-import com.catt.eomsteam.lsdown.master.service.NewDataTests;
-import com.catt.eomsteam.lsdown.master.service.impl.QueueServiceImpl;
+import com.catt.eomsteam.lsdown.base.cache.ICache;
+import com.catt.eomsteam.lsdown.base.cache.TaskInstCache;
 import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -19,17 +17,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MasterApplication {
 
   public static void main(String[] args) {
-    //    Logger logger = LoggerFactory.getLogger(MasterApplication.class);
     SpringApplication.run(MasterApplication.class, args);
-    //    NewDataTests bean = SpringUtil.getBean(NewDataTests.class);
-    //    bean.select();
-    //    logger.info("before");
-    //    RunningService lsstRunningService = SpringUtil.getBean(LsstRunningService.class);
-    //    ProgramSetting bean = SpringUtil.getBean(ProgramSetting.class);
-    //    System.out.println(bean.toString());
-    //    lsstRunningService.start();
-    //    logger.info("end");
-    IQueueService queueService = SpringUtil.getBean(QueueServiceImpl.class);
-    queueService.doQueue();
   }
 }

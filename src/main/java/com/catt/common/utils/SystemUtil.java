@@ -13,8 +13,10 @@ import java.util.List;
 
 public class SystemUtil {
   private static Logger logger = LoggerFactory.getLogger(SystemUtil.class);
+  private static List<String> localIpList = null;
 
   public static List<String> getLocalIPList() {
+    if (localIpList != null) return localIpList;
     List<String> ipList = new ArrayList<>();
     try {
       Enumeration<NetworkInterface> networkInterfaces = NetworkInterface.getNetworkInterfaces();
@@ -36,6 +38,7 @@ public class SystemUtil {
     } catch (SocketException e) {
       logger.error(e.getMessage());
     }
+    localIpList = ipList;
     return ipList;
   }
 }

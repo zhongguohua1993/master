@@ -9,10 +9,10 @@ import java.io.Serializable;
  * @since 2019-06-01
  */
 public enum ProgramType implements IEnum<Integer> {
-  LSST(1, "LSST"),
-  LSINST(2, "LSINST"),
-  SEND_REQ(3, "SEND_REQ"),
-  DO_REQ(4, "DO_REQ");
+  LSST(1, "目录扫描程序"),
+  LSINST(2, "文件扫描程序"),
+  SEND_REQ(3, "文件待办发送程序"),
+  DO_REQ(4, "文件下载程序");
   private int value;
   private String desc;
 
